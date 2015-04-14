@@ -1,4 +1,3 @@
 # Summary
 
-* [ddd](ddd.md)
 
