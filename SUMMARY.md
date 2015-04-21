@@ -7,5 +7,4 @@
    * 1.product_owner
    * 2.scrumaster
    * 4.scrum_2
-* 3.scrum_1
 
