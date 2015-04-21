@@ -7,5 +7,5 @@
 * [新產品開發流程](_新產品開發流程.md)
 * [協同上機考試](_xie_tong.md)
    * product_own
-   * scrumaster
+   * A
 
