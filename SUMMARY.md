@@ -5,4 +5,5 @@
 * 2.新產品開發流程
 * 3.協同上機考試
    * product_owner
+   * 2.scrumaster 
 
