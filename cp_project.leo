@@ -22,7 +22,10 @@ expanded="2014fall.20141212095015.1777,"><vh>@file wsgi.py</vh></v>
 expanded="office.20150407074720.3,"><vh>@file gear.py</vh></v>
 <v t="2014fall.20141212095015.1780"><vh>@edit setup.py</vh></v>
 </v>
-<v t="2015.20150330144929.1715" a="E"><vh>以下為專案報告相關檔案</vh>
+<v t="2015.20150421093923.1888" a="E"><vh>@path static/Brython3.1.1-20150328-091302/Lib/site-packages/</vh>
+<v t="2015.20150421093923.1889"><vh>@edit spur.py</vh></v>
+</v>
+<v t="2015.20150330144929.1715"><vh>以下為專案報告相關檔案</vh>
 <v t="2015.20150330144929.1716"><vh>@edit SUMMARY.md</vh></v>
 <v t="2015.20150330144929.1717"><vh>@edit README.md </vh></v>
 <v t="2015.20150330144929.1720"><vh>@edit _建立分組協同報告.md</vh></v>
@@ -254,5 +257,6 @@ def gear(midx, midy, rp, n, 顏色):
 gear(400,400,300,41,"blue")
 
 </t>
+<t tx="2015.20150421093923.1888"></t>
 </tnodes>
 </leo_file>
