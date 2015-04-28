@@ -550,7 +550,7 @@ class Hello(object):
     40223119繪製第3齒數:<input type=text name=c><br />
     40223115繪製第4齒數:<input type=text name=v><br />
     40223117繪製第5齒數:<input type=text name=b><br />
-    40223136繪製第6齒數:<input type=text name=n><br />
+    40223136繪製第6齒數:<input type=text name=d><br />
     壓力角:<input type=text name=p><br />
     模數:<input type=text name=m><br />
     <input type=submit value=send>
