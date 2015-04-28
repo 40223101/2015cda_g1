@@ -519,7 +519,7 @@ class Hello(object):
     #@+node:2015.20150421093923.1976: *3* mygeartest2
     @cherrypy.expose
     # N 為齒數, M 為模數, P 為壓力角
-    def mygeartest2(self, N=20, m=None, p=None,z=None,x=None,c=None):
+    def mygeartest2(self, N=20, m=None, p=None,z=None,x=None,c=None,v=None):
         outstring = '''
     <!DOCTYPE html> 
     <html>
@@ -548,6 +548,9 @@ class Hello(object):
     第1齒數:<input type=text name=z><br />
     第2齒數:<input type=text name=x><br />
     第3齒數:<input type=text name=c><br />
+    第4齒數:<input type=text name=v><br />
+    壓力角:<input type=text name=p><br />
+    模數:<input type=text name=m><br />
     <input type=submit value=send>
     </head>
     <!-- 啟動 brython() -->
@@ -580,10 +583,14 @@ class Hello(object):
     n_g2 = '''+str(x)+'''
     # 第3齒輪齒數
     n_g3 = '''+str(c)+'''
+    # 第4齒輪齒數
+    n_g4 = '''+str(v)+'''
+
     # 計算兩齒輪的節圓半徑
     rp_g1 = m*n_g1/2
     rp_g2 = m*n_g2/2
     rp_g3 = m*n_g3/2
+    rp_g4 = m*n_g4/2
 
     # 繪圖第1齒輪的圓心座標
     x_g1 = 400
@@ -594,6 +601,9 @@ class Hello(object):
     # 第3齒輪的圓心座標
     x_g3 = x_g1 + rp_g1 + 2*rp_g2 + rp_g3
     y_g3 = y_g1
+    # 第4齒輪的圓心座標
+    x_g4 = x_g1 + rp_g1 +2*rp_g2+ 2*rp_g3 +rp_g4
+    y_g4 = y_g1
 
     # 將第1齒輪順時鐘轉 90 度
     # 使用 ctx.save() 與 ctx.restore() 以確保各齒輪以相對座標進行旋轉繪圖
@@ -635,6 +645,25 @@ class Hello(object):
     ctx.translate(-x_g3, -y_g3)
     spur.Spur(ctx).Gear(x_g3, y_g3, rp_g3, n_g3, pa, "red")
     ctx.restore()
+
+    # 將第4齒輪逆時鐘轉 90 度之後, 再往回轉第1齒輪定位帶動轉角, 然後再逆時鐘多轉一齒, 以便與第2齒輪進行囓合
+    ctx.save()
+    # translate to the origin of second gear
+    ctx.translate(x_g4, y_g4)
+    # rotate to engage
+    # pi+pi/n_g3 為第3齒輪從順時鐘轉 90 度之後, 必須配合目前的標記線所作的齒輪 2 轉動角度, 要轉換到齒輪3 的轉動角度
+    # 必須乘上兩齒輪齒數的比例, 若齒輪2 大, 則齒輪3 會轉動較快
+    # 第1個 -pi/2 為將原先垂直的第4齒輪定位線逆時鐘旋轉 90 度
+    # -pi/n_g4 則是第4齒與第3齒定位線重合後, 必須再逆時鐘多轉一齒的轉角, 以便進行囓合
+    # (pi+pi/n_g3)*n_g3/n_g4 則是第3齒原定位線為順時鐘轉動 90 度, 
+    # 但是第4齒輪為了與第3齒輪囓合, 已經距離定位線, 多轉了 180 度, 再加上第3齒輪的一齒角度, 因為要帶動第4齒輪定位, 
+    # 這個修正角度必須要再配合第2齒與第3齒的轉速比加以轉換成第3齒輪的轉角, 因此乘上 n_g2/n_g4
+    ctx.rotate(-pi/2-pi/n_g4+(pi+pi/n_g3-(pi+pi/n_g2)*n_g2/n_g3)*n_g3/n_g4)
+    # put it back
+    ctx.translate(-x_g4, -y_g4)
+    spur.Spur(ctx).Gear(x_g4, y_g4, rp_g4, n_g4, pa, "Orange")
+    ctx.restore()
+    # 按照上面三個正齒輪的囓合轉角運算, 隨後的傳動齒輪轉角便可依此類推, 完成6個齒輪的囓合繪圖
 
     </script>
     <canvas id="plotarea" width="3000" height="3000"></canvas>
