@@ -537,7 +537,7 @@ class Hello(object):
       <option value="ST" style="background-color: #CCFF66;" >40223117李曜州</option>
       <option value="TU" style="background-color: #FFFF66;" >40223119易柏翔</option>
       <option value="HL" style="background-color: #FFCC66;">40223136黃金振</option>
-      <option value="AG" style="background-color: #FF9966;" >學長</option>
+      <option value="AG" style="background-color: #FF9966;" >40023256蕭閔鍵</option>
     </select>
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
     <!-- 載入 brython.js -->
@@ -545,10 +545,10 @@ class Hello(object):
     <script src="/static/Cango2D.js" type="text/javascript"></script>
     <script src="/static/gearUtils-04.js" type="text/javascript"></script>
     <form method=POST action=mygeartest2>
-    第1齒數:<input type=text name=z><br />
-    第2齒數:<input type=text name=x><br />
-    第3齒數:<input type=text name=c><br />
-    第4齒數:<input type=text name=v><br />
+    40223101繪製第1齒數:<input type=text name=z><br />
+    40023256繪製第2齒數:<input type=text name=x><br />
+    40223119繪製第3齒數:<input type=text name=c><br />
+    40223115繪製第4齒數:<input type=text name=v><br />
     壓力角:<input type=text name=p><br />
     模數:<input type=text name=m><br />
     <input type=submit value=send>
