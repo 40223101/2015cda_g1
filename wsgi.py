@@ -89,8 +89,25 @@ class Hello(object):
     # 有 self 的方法為類別中的成員方法, Python 程式透過此一 self 在各成員方法間傳遞物件內容
     def index(self):
         outstring = '''
-        <!DOCTYPE html> 
-        <html>
+    <!DOCTYPE html> 
+    <html>
+    <title>2015cda_g1</title>
+    </head>
+    <body>
+    <Select Size=1 onChange="window.open(this.value)">
+        <option>2015cda_g1齒輪</option>
+        <option value="http://40223101.gitbooks.io/2015cda_g1/content/" style="color:red;font-weight:bold" >小組 G i t b o o k</option>
+        <option value="https://waffle.io/40223101/2015cda_g1" style="color:Green;font-weight:bold" >小組 W a f f l e . i o</option>
+        <optgroup label="組長">
+        <option value="https://github.com/40223101/2015cda_g1" style="color:blue;font-weight:bold" >40223101王汎亦</option>
+    </optgroup>
+    <optgroup label="組員">
+        <option value="https://github.com/xindus40223115/2015cda_g1"+<option value="https://github.com/xindus40223115/2015cda_g1" style="background-color: #CCFFFF;" >40223115吳欣融</option>
+        <option value="https://github.com/40223117cda/cda" style="background-color: #CCFF66;" >40223117李曜州</option>
+        <option value="https://github.com/40223119/2015cda" style="background-color: #FFFF66;" >40223119易柏翔</option>
+        <option value="https://github.com/40223136/40223136cad" style="background-color: #FFCC66;">40223136黃金振</option>
+        <option value="https://github.com/40023256/2015cad" style="background-color: #FF9966;" >40023256蕭閔鍵</option>
+    </Select><br />
         <head>
         <meta http-equiv="content-type" content="text/html;charset=utf-8">
         </head>
@@ -165,20 +182,6 @@ class Hello(object):
     <title>2015cda_g1</title>
     </head>
     <body>
-    <Select Size=1 onChange="window.open(this.value)">
-        <option>2015cda_g1齒輪</option>
-        <option value="http://40223101.gitbooks.io/2015cda_g1/content/" style="color:red;font-weight:bold" >小組 G i t b o o k</option>
-        <option value="https://waffle.io/40223101/2015cda_g1" style="color:Green;font-weight:bold" >小組 W a f f l e . i o</option>
-        <optgroup label="組長">
-        <option value="https://github.com/40223101/2015cda_g1" style="color:blue;font-weight:bold" >40223101王汎亦</option>
-    </optgroup>
-    <optgroup label="組員">
-        <option value="https://github.com/xindus40223115/2015cda_g1"+<option value="https://github.com/xindus40223115/2015cda_g1" style="background-color: #CCFFFF;" >40223115吳欣融</option>
-        <option value="https://github.com/40223117cda/cda" style="background-color: #CCFF66;" >40223117李曜州</option>
-        <option value="https://github.com/40223119/2015cda" style="background-color: #FFFF66;" >40223119易柏翔</option>
-        <option value="https://github.com/40223136/40223136cad" style="background-color: #FFCC66;">40223136黃金振</option>
-        <option value="https://github.com/40023256/2015cad" style="background-color: #FF9966;" >40023256蕭閔鍵</option>
-    </Select>
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
     <!-- 載入 brython.js -->
     <script type="text/javascript" src="/static/Brython3.1.1-20150328-091302/brython.js"></script>
