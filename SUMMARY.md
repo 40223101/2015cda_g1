@@ -17,5 +17,4 @@
    * [2D齒輪嚙合繪製及表單](_2D齒輪嚙合繪製及表單.md)
    * [3D齒輪繪製](_3D齒輪繪製.md)
 * [第十一週工作內容](di_shi_yi_zhou_gong_zuo_nei_rong.md)
-* [as](as.md)
 
